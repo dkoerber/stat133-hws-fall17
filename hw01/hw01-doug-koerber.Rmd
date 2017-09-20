@@ -1,0 +1,45 @@
+---
+title: "hw01-doug-koerber"
+author: "Doug Koerber"
+date: "9/19/2017"
+output: html_document
+---
+
+```{r}
+load("data/nba2017-salary-points.RData")
+ls()
+```
+
+### 1) Data Preprocessing
+#### Salary in millions of dollars
+```{r}
+salary_mil = salary / 1000000
+round(salary_mil, digits = 2)
+```
+#### Replacing "R" with 0
+```{r}
+rookie_logic <- experience == "R"
+experience_int = replace(experience, rookie_logic, 0)
+experience_int = as.integer(experience_int)
+rm(rookie_logic)
+```
+#### Position Factor
+```{r}
+center <- position == "C"
+pf <- position == "PF"
+sg <- position == "SG"
+pg <- position == "PG"
+sf <- position == "SF"
+position_fac = replace(position, center, 'center')
+position_fac = replace(position_fac, sf, 'small_fwd')
+position_fac = replace(position_fac, pf, 'power_fwd')
+position_fac = replace(position_fac, sg, 'shoot_guard')
+position_fac = replace(position_fac, pg, 'point_guard')
+position_fac = factor(position_fac)
+rm(center, pf, sg, pg, sf)
+```
+
+##### Position Frequencies
+```{r}
+table(position_fac)
+```
