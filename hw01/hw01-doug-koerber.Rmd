@@ -71,7 +71,25 @@ b1 = cor_xy * (sd_y / sd_x)
 b0 = ybar - (b1 * xbar)
 yhat = b0 + (b1 * points)
 ```
+#### Summary Statistics of Y-hat
+```{r}
+summary(yhat)
+```
+#### Regression Equation: Inline Code
+yhat = `r round(b0, 4)` + (`r round(b1, 4)` * points)
 
+#### b1
+b1 is the effect of points on salary in millions, or the X variable on the Y variable.  Because our salary is in millions, we can see that an increase in 1 point scored would cause a `r round(b1, 4)` millions of dollars increase in salary.
+
+#### b0
+b0 is the y-intercept of our regression line.  This means that assuming a player scores 0 points in a season, their predicted salary is `r round(b0, 4)` millions of dollars.
+
+#### Predicted Salaries
+* X = 0 points:  $`r round(b0 + (b1 * 0), 4)` Million  
+* X = 100 points:  $`r round(b0 + (b1 * 100), 4)` Million  
+* X = 500 points:  $`r round(b0 + (b1 * 500), 4)` Million  
+* X = 1000 points:  $`r round(b0 + (b1 * 1000), 4)` Million  
+* X = 2000 points:  $`r round(b0 + (b1 * 2000), 4)` Million  
 
 ### 5) Plotting the Regression Line
 ```{r}
