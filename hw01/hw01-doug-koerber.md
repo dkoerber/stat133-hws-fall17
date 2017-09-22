@@ -40,23 +40,12 @@ head(experience_int, 10)
 #### Position Factor
 
 ``` r
-center <- position == "C"
-pf <- position == "PF"
-sg <- position == "SG"
-pg <- position == "PG"
-sf <- position == "SF"
-position_fac = replace(position, center, 'center')
-position_fac = replace(position_fac, sf, 'small_fwd')
-position_fac = replace(position_fac, pf, 'power_fwd')
-position_fac = replace(position_fac, sg, 'shoot_guard')
-position_fac = replace(position_fac, pg, 'point_guard')
-position_fac = factor(position_fac)
-rm(center, pf, sg, pg, sf)
+position_fac = factor(position, levels = c("C", "SF", "PF", "SG", "PG"), labels = c("center", "small_fwd", "power_fwd", "shoot_guard", "point_guard"))
 head(position_fac, 5)
 ```
 
     ## [1] center      power_fwd   shoot_guard point_guard small_fwd  
-    ## Levels: center point_guard power_fwd shoot_guard small_fwd
+    ## Levels: center small_fwd power_fwd shoot_guard point_guard
 
 ##### Position Frequencies
 
@@ -65,16 +54,16 @@ table(position_fac)
 ```
 
     ## position_fac
-    ##      center point_guard   power_fwd shoot_guard   small_fwd 
-    ##          89          85          89          95          83
+    ##      center   small_fwd   power_fwd shoot_guard point_guard 
+    ##          89          83          89          95          85
 
 ``` r
 table(position_fac) / length(position_fac)
 ```
 
     ## position_fac
-    ##      center point_guard   power_fwd shoot_guard   small_fwd 
-    ##   0.2018141   0.1927438   0.2018141   0.2154195   0.1882086
+    ##      center   small_fwd   power_fwd shoot_guard point_guard 
+    ##   0.2018141   0.1882086   0.2018141   0.2154195   0.1927438
 
 ### 2) Scatterplot of Points and Salary
 

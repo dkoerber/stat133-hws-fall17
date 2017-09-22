@@ -29,18 +29,7 @@ head(experience_int, 10)
 ```
 #### Position Factor
 ```{r}
-center <- position == "C"
-pf <- position == "PF"
-sg <- position == "SG"
-pg <- position == "PG"
-sf <- position == "SF"
-position_fac = replace(position, center, 'center')
-position_fac = replace(position_fac, sf, 'small_fwd')
-position_fac = replace(position_fac, pf, 'power_fwd')
-position_fac = replace(position_fac, sg, 'shoot_guard')
-position_fac = replace(position_fac, pg, 'point_guard')
-position_fac = factor(position_fac)
-rm(center, pf, sg, pg, sf)
+position_fac = factor(position, levels = c("C", "SF", "PF", "SG", "PG"), labels = c("center", "small_fwd", "power_fwd", "shoot_guard", "point_guard"))
 head(position_fac, 5)
 ```
 
