@@ -146,3 +146,25 @@ boxplot(salary_mil ~ position_fac, xlab = 'Position', ylab = 'Salary (in Million
 ```
 
 The above chart shows different boxplots for the salaries of each position in the NBA.  The thick black line represents the median, the lower-limit of the box represents the cutoff for the 1st quartile, the upper-limit represents the cutoff for the 3rd quartile, and the whiskers show the minimum and maximum values.  The box itself represents the interquartile range.  Note: the whiskers do not cover outliers, which instead are shown as dots above the tip of the whisker.
+
+### 8) Comments and Reflections
+* What things were hard, even though you saw them in class?
+    * It was difficult creating a boxplot with the different boxes for each level of a factor.  I had to research the function more in-depth in the `Help` section of R.
+* What was easy(-ish) even though we haven’t done it in class?
+    * Using the `scatterplot3d` was easy and very intuitive.  It was very similar to the regular `plot` function, just with the added _z_ variable.
+* If this was the first time you were using git, how do you feel about it?
+    * I've used git before in lab03, but I'm still not entirely comfortable with it.  I think more clarification on where the files go and what happens to the files when we type in _git add_, _git commit -m "message here"_, and _git push origin master_.  I'm also a bit confused on how the file layout is supposed to work, with graphs being stored in some "magically" created directory.  How is that directory made?  Is it made in the current working directory?
+* If this was the first time using GitHub, how do you feel about it?
+    * Although I'm not entirely familiar with all of GitHub, I think it will be a very useful tool for any sort of project/research/job I may do in the future.  I am unsure of how to download files straight from GitHub, do we just copy and paste the _raw_ into an empty Rmd file?
+* Did you need help to complete the assignment? If so, what kind of help? Who helped you?
+    * I didn't need help to complete the assignment, although I'm sure I could've saved about 30-45 minutes if I had someone to help.  Really, only google and the `Help` panel in R helped me.
+* How much time did it take to complete this HW?
+    * It took me maybe 5-6 hours to complete this homework.
+* What was the most time consuming part?
+    * The most time consuming part of this homework was playing with the graphs to present the data the way I wanted to see it.  For example, making my own color for the points in my plots was something that took a bit of time, but I wanted to learn how to do it.
+* Was there anything that you did not understand? or fully grasped?
+    * I don't fully grasp the _Lowess_ line.  I'm pretty familiar with the basic OLS regression statistics (I've taken Econ 140), so it was a nice refresher of the information I learned in that.  I'm also not sure that the way I've done certain things, like manipulate the _Position_ factor to display more detailed position names rather than "C", "PG", etc., is the most efficient way possible.  I'm sure I'll become more comfortable with the differences between vectors, factors, and different data types as the course goes on.
+* Was there anything frustrating in particular?
+    * Finding out how to create the boxplot with different boxes for each level of the _Position_ factor was slightly frustrating.  I also would really like to know more about the _Lowess_ line.
+* Was there anything exciting? Something that you feel proud of? (Don’t be shy, we won’t tell anyone).
+    * I feel proud of the finished result.  I've actually sent my analysis to a few friends who are interested in basketball and they enjoyed looking over it.  I can't wait to continue working with data in R, I really like how easy it is to display things!
