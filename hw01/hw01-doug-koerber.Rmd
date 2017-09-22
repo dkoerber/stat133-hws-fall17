@@ -1,10 +1,11 @@
 ---
-title: "hw01-doug-koerber"
+title: "HW01 - More Vectors"
+subtitle: "Stat 133, Fall 2017"
 author: "Doug Koerber"
-date: "9/19/2017"
 output: github_document
 ---
 
+### Importing Data
 ```{r}
 knitr::knit_hooks$set(inline = as.character)
 load("data/nba2017-salary-points.RData")
@@ -16,6 +17,7 @@ ls()
 ```{r}
 salary_mil = salary / 1000000
 salary_mil = round(salary_mil, digits = 2)
+head(salary_mil, 3)
 ```
 #### Replacing "R" with 0
 ```{r}
@@ -23,6 +25,7 @@ rookie_logic <- experience == "R"
 experience_int = replace(experience, rookie_logic, 0)
 experience_int = as.integer(experience_int)
 rm(rookie_logic)
+head(experience_int, 10)
 ```
 #### Position Factor
 ```{r}
@@ -38,11 +41,13 @@ position_fac = replace(position_fac, sg, 'shoot_guard')
 position_fac = replace(position_fac, pg, 'point_guard')
 position_fac = factor(position_fac)
 rm(center, pf, sg, pg, sf)
+head(position_fac, 5)
 ```
 
 ##### Position Frequencies
 ```{r}
 table(position_fac)
+table(position_fac) / length(position_fac)
 ```
 
 ### 2) Scatterplot of Points and Salary
@@ -50,7 +55,7 @@ table(position_fac)
 plot(points, salary_mil, cex = 1.1, col = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Points', ylab = 'Salary (in millions)', main = 'Scatterplot of Points and Salary')
 ```
 
-The above plot shows a weak, but noticeable, positive relationship between points and salary.  Most players are clustered below $5,000,000 and 500 points, whereas the league's "all-stars" tend to score more points and receive higher salaries.  Unfortunately, not everyone can be an "all-star."
+* The above plot shows a weak, but noticeable, positive relationship between points and salary.  Most players are clustered below $5,000,000 and 500 points, whereas the league's "all-stars" tend to score more points and receive higher salaries.  Unfortunately, not everyone can be an "all-star."
 
 ### 3) Correlation between Points and Salary
 For this exercise, _Points_ is assigned to the variable _X_, and _Salary_ is assigned to the variable _Y_.
@@ -65,6 +70,14 @@ sd_y = sqrt(var_y)
 cov_xy = (1/(n - 1)) * (sum((points - xbar)*(salary_mil - ybar)))
 cor_xy = cov_xy / (sd_x * sd_y)
 ```
+* _xbar_ = `r round(xbar, 2)`
+* _ybar_ = `r round(ybar, 2)`
+* _var_x_ = `r round(var_x, 2)`
+* _var_y_ = `r round(var_y, 2)`
+* _sd_x_ = `r round(sd_x, 2)`
+* _sd_y_ = `r round(sd_y, 2)`
+* _cov_xy_ = `r round(cov_xy, 2)`
+* _cor_xy_ = `r round(cor_xy, 2)`
 
 ### 4) Simple Linear Regression
 ```{r}
@@ -72,6 +85,12 @@ b1 = cor_xy * (sd_y / sd_x)
 b0 = ybar - (b1 * xbar)
 yhat = b0 + (b1 * points)
 ```
+* _b1_ = `r round(b1, 4)`
+* _b0_ = `r round(b0, 4)`
+```{r}
+head(yhat, 5)
+```
+
 #### Summary Statistics of Y-hat
 ```{r}
 summary(yhat)
@@ -79,10 +98,10 @@ summary(yhat)
 #### Regression Equation: Inline Code
 yhat = `r round(b0, 4)` + (`r round(b1, 4)` * points)
 
-#### b1
+#### _b1_
 b1 is the effect of points on salary in millions, or the X variable on the Y variable.  Because our salary is in millions, we can see that an increase in 1 point scored would cause a `r round(b1, 4)` millions of dollars increase in salary.
 
-#### b0
+#### _b0_
 b0 is the y-intercept of our regression line.  This means that assuming a player scores 0 points in a season, their predicted salary is `r round(b0, 4)` millions of dollars.
 
 #### Predicted Salaries
@@ -131,40 +150,42 @@ R^2 = `r round(R_sq, 2)`
 plot(experience_int, salary_mil, cex = 1.1, col = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Years of Experience', ylab = 'Salary (in millions)', main = 'Scatterplot of Years of Experience and Salary')
 lines(lowess(experience_int, salary_mil), col = "Red", lwd = 2)
 ```
-The above plot shows the estimated value of _salary_ based on _years of experience_.  The red line, a _lowess_ line, is a locally-weighted regression function, meaning that it shows estimated values for salary based on some local weighting of _years of experience_.  Values closer to the point being estimated are given more weight in a _lowess regression method_.
+
+* The above plot shows the estimated value of _salary_ based on _years of experience_.  The red line, a _lowess_ line, is a locally-weighted regression function, meaning that it shows estimated values for salary based on some local weighting of _years of experience_.  Values closer to the point being estimated are given more weight in a _lowess regression method_.
 
 #### 3D Scatterplot of Points, Experience, and Salary in Millions
 ```{r}
 library('scatterplot3d')
 scatterplot3d(points, experience_int, salary_mil, color = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Points', ylab = 'Years of Experience', zlab = 'Salary (in Millions)', main = 'Scatterplot of Points, Experience, and Salary', cex.symbols = 1.1)
 ```
-The above graph is a 3-dimensional visualization of _salary_, _points_, and _years of experience_.  This graph gives us 3 variables to compare with one another, rather than the 2 in a basic scatterplot.  A player's _points_ control how far right the dot is placed, their _salary_ controls how high up the dot is placed, and their _years of experience_ controls how far back the dot is placed.
+
+* The above graph is a 3-dimensional visualization of _salary_, _points_, and _years of experience_.  This graph gives us 3 variables to compare with one another, rather than the 2 in a basic scatterplot.  A player's _points_ control how far right the dot is placed, their _salary_ controls how high up the dot is placed, and their _years of experience_ controls how far back the dot is placed.
 
 #### Boxplot of Salary conditional upon Position
 ```{r}
 boxplot(salary_mil ~ position_fac, xlab = 'Position', ylab = 'Salary (in Millions)')
 ```
 
-The above chart shows different boxplots for the salaries of each position in the NBA.  The thick black line represents the median, the lower-limit of the box represents the cutoff for the 1st quartile, the upper-limit represents the cutoff for the 3rd quartile, and the whiskers show the minimum and maximum values.  The box itself represents the interquartile range.  Note: the whiskers do not cover outliers, which instead are shown as dots above the tip of the whisker.
+* The above chart shows different boxplots for the salaries of each position in the NBA.  The thick black line represents the median, the lower-limit of the box represents the cutoff for the 1st quartile, the upper-limit represents the cutoff for the 3rd quartile, and the whiskers show the minimum and maximum values.  The box itself represents the interquartile range.  Note: the whiskers do not cover outliers, which instead are shown as dots above the tip of the whisker.
 
 ### 8) Comments and Reflections
-* What things were hard, even though you saw them in class?
+* __What things were hard, even though you saw them in class?__
     * It was difficult creating a boxplot with the different boxes for each level of a factor.  I had to research the function more in-depth in the `Help` section of R.
-* What was easy(-ish) even though we haven’t done it in class?
+* __What was easy(-ish) even though we haven’t done it in class?__
     * Using the `scatterplot3d` was easy and very intuitive.  It was very similar to the regular `plot` function, just with the added _z_ variable.
-* If this was the first time you were using git, how do you feel about it?
+* __If this was the first time you were using git, how do you feel about it?__
     * I've used git before in lab03, but I'm still not entirely comfortable with it.  I think more clarification on where the files go and what happens to the files when we type in _git add_, _git commit -m "message here"_, and _git push origin master_.  I'm also a bit confused on how the file layout is supposed to work, with graphs being stored in some "magically" created directory.  How is that directory made?  Is it made in the current working directory?
-* If this was the first time using GitHub, how do you feel about it?
+* __If this was the first time using GitHub, how do you feel about it?__
     * Although I'm not entirely familiar with all of GitHub, I think it will be a very useful tool for any sort of project/research/job I may do in the future.  I am unsure of how to download files straight from GitHub, do we just copy and paste the _raw_ into an empty Rmd file?
-* Did you need help to complete the assignment? If so, what kind of help? Who helped you?
+* __Did you need help to complete the assignment? If so, what kind of help? Who helped you?__
     * I didn't need help to complete the assignment, although I'm sure I could've saved about 30-45 minutes if I had someone to help.  Really, only google and the `Help` panel in R helped me.
-* How much time did it take to complete this HW?
+* __How much time did it take to complete this HW?__
     * It took me maybe 5-6 hours to complete this homework.
-* What was the most time consuming part?
+* __What was the most time consuming part?__
     * The most time consuming part of this homework was playing with the graphs to present the data the way I wanted to see it.  For example, making my own color for the points in my plots was something that took a bit of time, but I wanted to learn how to do it.
-* Was there anything that you did not understand? or fully grasped?
+* __Was there anything that you did not understand? or fully grasped?__
     * I don't fully grasp the _Lowess_ line.  I'm pretty familiar with the basic OLS regression statistics (I've taken Econ 140), so it was a nice refresher of the information I learned in that.  I'm also not sure that the way I've done certain things, like manipulate the _Position_ factor to display more detailed position names rather than "C", "PG", etc., is the most efficient way possible.  I'm sure I'll become more comfortable with the differences between vectors, factors, and different data types as the course goes on.
-* Was there anything frustrating in particular?
+* __Was there anything frustrating in particular?__
     * Finding out how to create the boxplot with different boxes for each level of the _Position_ factor was slightly frustrating.  I also would really like to know more about the _Lowess_ line.
-* Was there anything exciting? Something that you feel proud of? (Don’t be shy, we won’t tell anyone).
+* __Was there anything exciting? Something that you feel proud of? (Don’t be shy, we won’t tell anyone).__
     * I feel proud of the finished result.  I've actually sent my analysis to a few friends who are interested in basketball and they enjoyed looking over it.  I can't wait to continue working with data in R, I really like how easy it is to display things!
