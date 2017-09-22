@@ -50,7 +50,7 @@ table(position_fac)
 plot(points, salary_mil, cex = 1.1, col = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Points', ylab = 'Salary (in millions)', main = 'Scatterplot of Points and Salary')
 ```
 
-The above plot shows a weak, but noticeable, positive relationship between points and salary.  Most players are clustered below $5,000,000 and 500 points, whereas the league's "all-starts" tend to score more points and receive higher salaries.  Unfortunately, not everyone can be an "all-star."
+The above plot shows a weak, but noticeable, positive relationship between points and salary.  Most players are clustered below $5,000,000 and 500 points, whereas the league's "all-stars" tend to score more points and receive higher salaries.  Unfortunately, not everyone can be an "all-star."
 
 ### 3) Correlation between Points and Salary
 For this exercise, _Points_ is assigned to the variable _X_, and _Salary_ is assigned to the variable _Y_.
@@ -125,20 +125,24 @@ R_sq = 1 - (RSS / TSS)
 ```
 R^2 = `r round(R_sq, 2)`
 
-### Exploring Position and Experience
+### 7) Exploring Position and Experience
 #### Scatterplot of Years of Experience and Salary
 ```{r}
-plot(experience_int, salary_mil, cex = 1.1, col = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Points', ylab = 'Salary (in millions)', main = 'Scatterplot of Points and Salary')
+plot(experience_int, salary_mil, cex = 1.1, col = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Years of Experience', ylab = 'Salary (in millions)', main = 'Scatterplot of Years of Experience and Salary')
 lines(lowess(experience_int, salary_mil), col = "Red", lwd = 2)
 ```
+The above plot shows the estimated value of _salary_ based on _years of experience_.  The red line, a _lowess_ line, is a locally-weighted regression function, meaning that it shows estimated values for salary based on some local weighting of _years of experience_.  Values closer to the point being estimated are given more weight in a _lowess regression method_.
 
 #### 3D Scatterplot of Points, Experience, and Salary in Millions
 ```{r}
-scatterplot3d(points, experience_int, salary_mil, color = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Points', ylab = 'Years of Experience', zlab = 'Salary in Millions', main = 'Scatterplot of Points, Experience, and Salary', cex.symbols = 1.1)
+library('scatterplot3d')
+scatterplot3d(points, experience_int, salary_mil, color = rgb(50, 172, 150, maxColorValue = 255), xlab = 'Points', ylab = 'Years of Experience', zlab = 'Salary (in Millions)', main = 'Scatterplot of Points, Experience, and Salary', cex.symbols = 1.1)
 ```
+The above graph is a 3-dimensional visualization of _salary_, _points_, and _years of experience_.  This graph gives us 3 variables to compare with one another, rather than the 2 in a basic scatterplot.  A player's _points_ control how far right the dot is placed, their _salary_ controls how high up the dot is placed, and their _years of experience_ controls how far back the dot is placed.
 
 #### Boxplot of Salary conditional upon Position
 ```{r}
 boxplot(salary_mil ~ position_fac, xlab = 'Position', ylab = 'Salary (in Millions)')
 ```
 
+The above chart shows different boxplots for the salaries of each position in the NBA.  The thick black line represents the median, the lower-limit of the box represents the cutoff for the 1st quartile, the upper-limit represents the cutoff for the 3rd quartile, and the whiskers show the minimum and maximum values.  The box itself represents the interquartile range.  Note: the whiskers do not cover outliers, which instead are shown as dots above the tip of the whisker.
