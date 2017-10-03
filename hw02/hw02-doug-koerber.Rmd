@@ -102,3 +102,23 @@ text(30, 25000000, labels = "Lowess", col = "Red")
 sal_EFF <- cor(players2$Salary, players2$EFF)
 ```
 cor(Salary, EFF) = `r round(sal_EFF, 2)`
+* The relationship between Salary and EFF is positive, but not abnormally strong.  Correlation, being a measure of linearity, does not provide us with an accurate method of predicting salary based on EFF.  Being that the players studied in this section are more "established", we can infer that once a player is established, part of their salary is made up of EFF, but other parts of their salary are made up by other variables, perhaps the player's level of fame or some other variable that is not accounted for in EFF.
+
+### 6) Comments and Reflections
+* What things were hard, even though you saw them in class/lab?
+    * Importing the data using `readr` took a bit of fidgeting to get working.  In addition, I spent some time trying to find a way to compute the multiple correlation coefficients in a more efficient way but was unsuccsessful in finding a quicker method.
+* What was easy(-ish) even though we haven’t done it in class/lab?
+    * I feel like most of the material in this homework assignment has been covered in class or lab, but creating plots and charts is easy.  I understand the different properties of graphs as well, such as `col`, `cex`, `lines`.
+* Did you need help to complete the assignment? If so, what kind of help?
+    * I did not need any help to complete this assignment.
+* How much time did it take to complete this HW?
+    * This assignment took me approximately 4 or 5 hours to complete.
+* What was the most time consuming part?
+    * The most time consuming part was working with `readr`, as I felt that I had worked with most of the other material.
+* Was there anything that you did not understand? or fully grasped?
+    * I'm still a bit confused on the differences between a factor and other types of data.
+* Was there anything frustrating in particular?
+    * I found my unsuccessful attempts at finding a way to calculate multiple correlation coefficients in fewer lines of code to be a bit frustrating.
+* Was there anything exciting? Something that you feel proud of? (Don’t be shy, we
+won’t tell anyone).
+    * I enjoy seeing how easy it is to modify graphs, such as adding the lowess line.  I've had to calculate various regression lines in the past and it can be a bit time consuming, but it's nice to simply type a quick line of code and include a regression line.
