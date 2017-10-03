@@ -2,6 +2,10 @@ hw02-doug-koerber
 ================
 Doug Koerber
 
+### 1) Data Dictionary
+
+*See data dictionary in GitHub*
+
 ### 2) Importing Data Into R
 
 ``` r
@@ -147,6 +151,16 @@ text(30, 28000000, labels = "Lowess", col = "Red")
 
 ![](hw02-doug-koerber_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-12-1.png)
 
+#### Linear Correlation Coefficient of Salary and Efficiency
+
+``` r
+sal_EFF1 = cor(dat_b$Salary, dat_b$EFF)
+```
+
+cor(Salary, EFF) = 0.66
+
+-   The relationship between Salary and EFF is positive and slightly strong. Correlation, being a measure of linearity, does not provide us with an accurate method of predicting salary based on EFF. This coefficient proves that higher salaries tend to be associated with higher EFF stats, but how *much* higher we do not know.
+
 #### Data Frame of MPG &gt; 20
 
 ``` r
@@ -161,15 +175,17 @@ lines(lowess(x = players2$EFF, y = players2$Salary), col = "Red", lwd = 2)
 text(30, 25000000, labels = "Lowess", col = "Red")
 ```
 
-![](hw02-doug-koerber_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-14-1.png)
+![](hw02-doug-koerber_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-15-1.png)
 
 #### Linear Correlation Coefficient of Salary and Efficiency
 
 ``` r
-sal_EFF <- cor(players2$Salary, players2$EFF)
+sal_EFF2 <- cor(players2$Salary, players2$EFF)
 ```
 
-cor(Salary, EFF) = 0.54 \* The relationship between Salary and EFF is positive, but not abnormally strong. Correlation, being a measure of linearity, does not provide us with an accurate method of predicting salary based on EFF. Being that the players studied in this section are more "established", we can infer that once a player is established, part of their salary is made up of EFF, but other parts of their salary are made up by other variables, perhaps the player's level of fame or some other variable that is not accounted for in EFF.
+cor(Salary, EFF) = 0.54
+
+-   The relationship between Salary and EFF is positive, but not abnormally strong. Correlation, being a measure of linearity, does not provide us with an accurate method of predicting salary based on EFF. Being that the players studied in this section are more "established", we can infer that once a player is established, part of their salary is made up of EFF, but other parts of their salary are made up by other variables, perhaps the player's level of fame or some other variable that is not accounted for in EFF.
 
 ### 6) Comments and Reflections
 

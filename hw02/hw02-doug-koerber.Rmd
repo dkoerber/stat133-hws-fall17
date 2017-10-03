@@ -3,6 +3,8 @@ title: "hw02-doug-koerber"
 author: "Doug Koerber"
 output: github_document
 ---
+### 1) Data Dictionary
+_See data dictionary in GitHub_
 
 ### 2) Importing Data Into R
 ```{r}
@@ -85,6 +87,14 @@ lines(lowess(x = dat_b$EFF, y = dat_b$Salary), col = "Red", lwd = 2)
 text(30, 28000000, labels = "Lowess", col = "Red")
 ```
 
+#### Linear Correlation Coefficient of Salary and Efficiency
+```{r}
+sal_EFF1 = cor(dat_b$Salary, dat_b$EFF)
+```
+cor(Salary, EFF) = `r round(sal_EFF1, 2)`
+
+* The relationship between Salary and EFF is positive and slightly strong.  Correlation, being a measure of linearity, does not provide us with an accurate method of predicting salary based on EFF.  This coefficient proves that higher salaries tend to be associated with higher EFF stats, but how _much_ higher we do not know.
+
 #### Data Frame of MPG > 20
 ```{r}
 players2 <- dat_b[dat_b$MPG >= 20, ]
@@ -99,9 +109,10 @@ text(30, 25000000, labels = "Lowess", col = "Red")
 
 #### Linear Correlation Coefficient of Salary and Efficiency
 ```{r}
-sal_EFF <- cor(players2$Salary, players2$EFF)
+sal_EFF2 <- cor(players2$Salary, players2$EFF)
 ```
-cor(Salary, EFF) = `r round(sal_EFF, 2)`
+cor(Salary, EFF) = `r round(sal_EFF2, 2)`  
+
 * The relationship between Salary and EFF is positive, but not abnormally strong.  Correlation, being a measure of linearity, does not provide us with an accurate method of predicting salary based on EFF.  Being that the players studied in this section are more "established", we can infer that once a player is established, part of their salary is made up of EFF, but other parts of their salary are made up by other variables, perhaps the player's level of fame or some other variable that is not accounted for in EFF.
 
 ### 6) Comments and Reflections
