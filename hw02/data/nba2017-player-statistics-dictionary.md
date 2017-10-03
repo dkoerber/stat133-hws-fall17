@@ -2,7 +2,7 @@ The data in this homework assignment contains a number of statistics, or variabl
 
 Link to the website: [NBA Data](www.basketball-reference.com)  
 
-Sample link for a data source: (GSW Data)[https://www.basketball-reference.com/teams/GSW/2017.html]
+Sample link for a data source: [GSW Data](https://www.basketball-reference.com/teams/GSW/2017.html)
 
 __Column Label:__ Description
 --------------------------------
