@@ -1,10 +1,10 @@
 The data in this homework assignment contains a number of statistics, or variables seen below, for all player in the NBA for the 2016-2017 season.  There are 441 rows and 24 columns, but a few more columns (variables) will be created for the homework assignment.  The column labels are the statistic names for the variables contained in that column (see below).  The units of measurement are included in the description of each variable.
 
-Link to the website: [www.basketball-reference.com]  
-Sample link for a data source: [https://www.basketball-reference.com/teams/GSW/2017.html]
+Link to the website: [NBA Data](www.basketball-reference.com)  
+Sample link for a data source: (GSW Data)[https://www.basketball-reference.com/teams/GSW/2017.html]
 
 __Column Label:__ Description
------------------ ---------------
+--------------------------------
 __Player:__        first and last names of player  
 __Team:__          3-letter team abbreviation  
 __Position:__      player’s position  
