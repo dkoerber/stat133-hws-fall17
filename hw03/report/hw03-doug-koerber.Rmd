@@ -17,7 +17,6 @@ ggplot(data = teams, aes(x = reorder(team, salary), y = salary)) +
 
 #### Total Points
 ```{r}
-library(ggplot2)
 ggplot(data = teams, aes(x = reorder(team, points), y = points)) +
   geom_bar(stat = "identity", fill = "gray60") +
   geom_hline(aes(yintercept = mean(points)), col = rgb(50, 172, 150, maxColorValue = 255), size = 2, alpha = 0.7) +
@@ -27,7 +26,6 @@ ggplot(data = teams, aes(x = reorder(team, points), y = points)) +
 
 #### Efficiency
 ```{r}
-library(ggplot2)
 ggplot(data = teams, aes(x = reorder(team, efficiency), y = efficiency)) +
   geom_bar(stat = "identity", fill = "gray60") +
   geom_hline(aes(yintercept = mean(efficiency)), col = rgb(50, 172, 150, maxColorValue = 255), size = 2, alpha = 0.7) +
@@ -46,6 +44,18 @@ eigs <- round(mutate(eigs, cumprop = cumsum(prop)), 4)
 ```{r}
 pca_plot <- data.frame(teams$team, pca$x)
 ggplot(data = pca_plot, aes(x = PC1, y = PC2)) +
-  geom_point()
+  geom_text(aes(label = teams$team)) +
+  geom_vline(xintercept = 0, col = "gray50") +
+  geom_hline(yintercept = 0, col = "gray50") +
+  labs(title = "PCA Plot: PC1 and PC2")
+```
+
+### Scaled PC1 Scores
+```{r}
+pca_plot <- mutate(pca_plot, PC1_scaled = 100 * ((PC1 - min(PC1)) / (max(PC1) - min(PC1))))
+ggplot(data = pca_plot, aes(x = reorder(teams.team, PC1_scaled), y = PC1_scaled)) +
+  geom_bar(stat = "identity", fill = "gray60") +
+  coord_flip() +
+  labs(x = "Team", y = "PC1 (Scaled to 100)", title = "NBA Teams Ranked by Scaled PC1")
 ```
 
