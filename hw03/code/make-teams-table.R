@@ -30,18 +30,19 @@ roster_stats <- inner_join(roster, stats)
 teams <- roster_stats %>%
            group_by(team) %>%
              summarise(experience = round(sum(experience), 2),
-               salary = round(sum(salary), 2),
+               salary = round(sum(salary) / 1000000, 2),
                points3 = sum(points3_made),
                points2 = sum(points2_made),
-               free_throws = sum(field_goals_made),
+               free_throws = sum(points1_made),
                points = sum(points),
                off_rebounds = sum(off_rebounds),
                def_rebounds = sum(def_rebounds),
                assists = sum(assists),
+               steals = sum(steals),
                blocks = sum(blocks),
                turnovers = sum(turnovers),
                fouls = sum(fouls),
-               effifiency = sum(efficiency)
+               efficiency = sum(efficiency)
              )
 
 sink(file = "../data/teams-summary.txt")
