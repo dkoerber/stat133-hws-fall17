@@ -1,8 +1,7 @@
-### NBA 2017 Stats: Data Dictionary
+# NBA 2017 Stats: Data Dictionary
 The data in this homework assignment contains a number of statistics, or variables as seen below, for all players in the NBA for the 2016-2017 season. The column labels are the statistic names for the variables contained in that column (see below).
 
 __Column Label:__ Description
---------------------------------
 __player:__              player name  
 __games_played:__        number of games played in the season  
 __minutes:__             number of minutes played in the season  
