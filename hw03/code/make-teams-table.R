@@ -1,8 +1,8 @@
 -------------------------------------------------------
-# Title: Make teams from data
-# Description:
-# Input:
-# Output:
+# Title: hw03 code
+# Description: script to produce clean data for hw03
+# Input: nba2017-roster.csv and nba2017-stats.csv
+# Output: multiple summaries and graphs, nba2017-teams.csv
 -------------------------------------------------------
 
 library(readr)
