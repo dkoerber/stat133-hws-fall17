@@ -1,4 +1,4 @@
-### NBA 2017 Roster: Data Dictionary
+# NBA 2017 Roster: Data Dictionary
 The data in this homework assignment contains a number of statistics, or variables as seen below, for all players in the NBA for the 2016-2017 season. The column labels are the statistic names for the variables contained in that column (see below).
 
 __Column Label:__ Description
