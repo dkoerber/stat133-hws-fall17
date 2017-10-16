@@ -3,11 +3,11 @@ The data in this homework assignment contains a number of statistics, or variabl
 
 __Column Label:__ Description
 --------------------------------
-__player:__         player name
-__team:__           team name of the player
-__position:__       position played by the player
-__height:__         height of the player in pounds
-__weight:__         weight of the player in inches
-__age:__            age of the player in years
-__experience:__     years of experience for the player
-__salary:__         salary of the player
+__player:__         player name  
+__team:__           team name of the player  
+__position:__       position played by the player  
+__height:__         height of the player in pounds  
+__weight:__         weight of the player in inches  
+__age:__            age of the player in years  
+__experience:__     years of experience for the player  
+__salary:__         salary of the player  
