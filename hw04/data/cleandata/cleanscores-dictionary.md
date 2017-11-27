@@ -10,7 +10,7 @@ __QZ2:__        quiz 2 score, out of 18
 __QZ3:__        quiz 3 score, out of 20  
 __QZ4:__        quiz 4 score, out of 20  
 __EX1:__        exam 1 score, out of 80  
-__EX2:__        exam 2 score, out of 90
+__EX2:__        exam 2 score, out of 90  
 __Test1:__      exam 1 score, rescaled to 100  
 __Test2:__      exam 2 score, rescaled to 100  
 __Homework:__   overall score on homework, dropping the lowest  
