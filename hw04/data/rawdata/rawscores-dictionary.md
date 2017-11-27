@@ -9,5 +9,5 @@ __QZ1:__        quiz 1 score, out of 12
 __QZ2:__        quiz 2 score, out of 18  
 __QZ3:__        quiz 3 score, out of 20  
 __QZ4:__        quiz 4 score, out of 20  
-__EX1:__        exam 1 score, out of 80
+__EX1:__        exam 1 score, out of 80  
 __EX2:__        exam 2 score, out of 90
