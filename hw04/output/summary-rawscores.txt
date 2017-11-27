@@ -20,192 +20,224 @@ structure of the scores data.frame
 
 HW1
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 75.0000
-[1] median   : 85.0000
-[1] mean     : 81.4323
-[1] quartile3: 92.5000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 15.9908
-[1] missing  : 9.0000
+minimum  : 0.0000
+percent10: 62.5000
+quartile1: 75.0000
+median   : 85.0000
+mean     : 81.4323
+quartile3: 92.5000
+percent90: 95.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 15.9908
+missing  : 9.0000
 
 HW2
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 80.5000
-[1] median   : 95.0000
-[1] mean     : 88.2341
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 15.9450
-[1] missing  : 20.0000
+minimum  : 0.0000
+percent10: 70.0000
+quartile1: 80.5000
+median   : 95.0000
+mean     : 88.2341
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 15.9450
+missing  : 20.0000
 
 HW3
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 87.5000
-[1] median   : 95.0000
-[1] mean     : 90.9997
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 13.9676
-[1] missing  : 11.0000
+minimum  : 0.0000
+percent10: 77.5000
+quartile1: 87.5000
+median   : 95.0000
+mean     : 90.9997
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 13.9676
+missing  : 11.0000
 
 HW4
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 77.5000
-[1] median   : 90.0000
-[1] mean     : 84.6026
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 18.3898
-[1] missing  : 22.0000
+minimum  : 0.0000
+percent10: 60.5000
+quartile1: 77.5000
+median   : 90.0000
+mean     : 84.6026
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 18.3898
+missing  : 22.0000
 
 HW5
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 90.0000
-[1] median   : 96.2500
-[1] mean     : 92.1270
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 13.9293
-[1] missing  : 19.0000
+minimum  : 0.0000
+percent10: 76.7500
+quartile1: 90.0000
+median   : 96.2500
+mean     : 92.1270
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 13.9293
+missing  : 19.0000
 
 HW6
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 86.0000
-[1] median   : 94.0000
-[1] mean     : 87.9904
-[1] quartile3: 99.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 18.5648
-[1] missing  : 21.0000
+minimum  : 0.0000
+percent10: 72.0000
+quartile1: 86.0000
+median   : 94.0000
+mean     : 87.9904
+quartile3: 99.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 18.5648
+missing  : 21.0000
 
 HW7
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 80.6250
-[1] median   : 92.0000
-[1] mean     : 85.9183
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 19.7436
-[1] missing  : 28.0000
+minimum  : 0.0000
+percent10: 65.0000
+quartile1: 80.6250
+median   : 92.0000
+mean     : 85.9183
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 19.7436
+missing  : 28.0000
 
 HW8
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 80.0000
-[1] median   : 90.0000
-[1] mean     : 86.0815
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 18.7604
-[1] missing  : 21.0000
+minimum  : 0.0000
+percent10: 68.0000
+quartile1: 80.0000
+median   : 90.0000
+mean     : 86.0815
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 18.7604
+missing  : 21.0000
 
 HW9
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 80.0000
-[1] median   : 90.0000
-[1] mean     : 86.9022
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 15.7427
-[1] missing  : 22.0000
+minimum  : 0.0000
+percent10: 70.0000
+quartile1: 80.0000
+median   : 90.0000
+mean     : 86.9022
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 15.7427
+missing  : 22.0000
 
 ATT
 -------------------------------------------------------------------
-[1] minimum  : 3
-[1] quartile1: 11.0000
-[1] median   : 12.0000
-[1] mean     : 11.4012
-[1] quartile3: 12.0000
-[1] maximum  : 12
-[1] range    : 9
-[1] stdev    : 1.3801
-[1] missing  : 0.0000
+minimum  : 3
+percent10: 10.0000
+quartile1: 11.0000
+median   : 12.0000
+mean     : 11.4012
+quartile3: 12.0000
+percent90: 12.0000
+maximum  : 12
+range    : 9
+stdev    : 1.3801
+missing  : 0.0000
 
 QZ1
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 8.0000
-[1] median   : 10.0000
-[1] mean     : 9.4535
-[1] quartile3: 11.0000
-[1] maximum  : 12.0000
-[1] range    : 12.0000
-[1] stdev    : 2.2448
-[1] missing  : 1.0000
+minimum  : 0.0000
+percent10: 6.0000
+quartile1: 8.0000
+median   : 10.0000
+mean     : 9.4535
+quartile3: 11.0000
+percent90: 12.0000
+maximum  : 12.0000
+range    : 12.0000
+stdev    : 2.2448
+missing  : 1.0000
 
 QZ2
 -------------------------------------------------------------------
-[1] minimum  : 0
-[1] quartile1: 10.0000
-[1] median   : 13
-[1] mean     : 12.6192
-[1] quartile3: 16.0000
-[1] maximum  : 18
-[1] range    : 18
-[1] stdev    : 4.1763
-[1] missing  : 11.0000
+minimum  : 0
+percent10: 7.0000
+quartile1: 10.0000
+median   : 13
+mean     : 12.6192
+quartile3: 16.0000
+percent90: 18.0000
+maximum  : 18
+range    : 18
+stdev    : 4.1763
+missing  : 11.0000
 
 QZ3
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 11.0000
-[1] median   : 14.0000
-[1] mean     : 13.0701
-[1] quartile3: 16.0000
-[1] maximum  : 20.0000
-[1] range    : 20.0000
-[1] stdev    : 4.0933
-[1] missing  : 20.0000
+minimum  : 0.0000
+percent10: 7.0000
+quartile1: 11.0000
+median   : 14.0000
+mean     : 13.0701
+quartile3: 16.0000
+percent90: 18.0000
+maximum  : 20.0000
+range    : 20.0000
+stdev    : 4.0933
+missing  : 20.0000
 
 QZ4
 -------------------------------------------------------------------
-[1] minimum  : 0
-[1] quartile1: 14.0000
-[1] median   : 17
-[1] mean     : 15.9714
-[1] quartile3: 19.0000
-[1] maximum  : 20
-[1] range    : 20
-[1] stdev    : 4.2241
-[1] missing  : 19.0000
+minimum  : 0
+percent10: 10.0000
+quartile1: 14.0000
+median   : 17
+mean     : 15.9714
+quartile3: 19.0000
+percent90: 20.0000
+maximum  : 20
+range    : 20
+stdev    : 4.2241
+missing  : 19.0000
 
 EX1
 -------------------------------------------------------------------
-[1] minimum  : 14.4000
-[1] quartile1: 55.2000
-[1] median   : 64.0000
-[1] mean     : 60.7310
-[1] quartile3: 69.6000
-[1] maximum  : 80.0000
-[1] range    : 65.6000
-[1] stdev    : 12.7058
-[1] missing  : 0.0000
+minimum  : 14.4000
+percent10: 42.4000
+quartile1: 55.2000
+median   : 64.0000
+mean     : 60.7310
+quartile3: 69.6000
+percent90: 74.9600
+maximum  : 80.0000
+range    : 65.6000
+stdev    : 12.7058
+missing  : 0.0000
 
 EX2
 -------------------------------------------------------------------
-[1] minimum  : 12.6000
-[1] quartile1: 56.7000
-[1] median   : 66.6000
-[1] mean     : 63.9903
-[1] quartile3: 75.1500
-[1] maximum  : 90.0000
-[1] range    : 77.4000
-[1] stdev    : 15.7235
-[1] missing  : 0.0000
+minimum  : 12.6000
+percent10: 41.0850
+quartile1: 56.7000
+median   : 66.6000
+mean     : 63.9903
+quartile3: 75.1500
+percent90: 80.4150
+maximum  : 90.0000
+range    : 77.4000
+stdev    : 15.7235
+missing  : 0.0000

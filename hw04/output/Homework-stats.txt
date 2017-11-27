@@ -1,11 +1,13 @@
 Homework
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 77.5000
-[1] median   : 92.5000
-[1] mean     : 82.9506
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 26.0491
-[1] missing  : 0.0000
+minimum  : 0.0000
+percent10: 57.1500
+quartile1: 77.5000
+median   : 92.5000
+mean     : 82.9506
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 26.0491
+missing  : 0.0000

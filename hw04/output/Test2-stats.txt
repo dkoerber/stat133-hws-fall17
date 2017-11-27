@@ -1,11 +1,13 @@
 Test2
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 90.0000
-[1] median   : 95.0000
-[1] mean     : 86.8862
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 25.2918
-[1] missing  : 0.0000
+minimum  : 0.0000
+percent10: 65.0000
+quartile1: 90.0000
+median   : 95.0000
+mean     : 86.8862
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 25.2918
+missing  : 0.0000

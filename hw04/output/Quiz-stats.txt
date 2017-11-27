@@ -1,11 +1,13 @@
 Quiz
 -------------------------------------------------------------------
-[1] minimum  : 0.0000
-[1] quartile1: 85.6250
-[1] median   : 95.0000
-[1] mean     : 88.0027
-[1] quartile3: 100.0000
-[1] maximum  : 100.0000
-[1] range    : 100.0000
-[1] stdev    : 21.2881
-[1] missing  : 0.0000
+minimum  : 0.0000
+percent10: 72.5000
+quartile1: 85.6250
+median   : 95.0000
+mean     : 88.0027
+quartile3: 100.0000
+percent90: 100.0000
+maximum  : 100.0000
+range    : 100.0000
+stdev    : 21.2881
+missing  : 0.0000
