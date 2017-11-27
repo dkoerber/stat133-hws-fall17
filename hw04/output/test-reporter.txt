@@ -1,0 +1,10 @@
+Testing for remove_missing: .
+Testing for get_minimum: .1..
+
+Failed ---------------------------------------------------------------------------------------------
+1. Failure: Minimum value is identified (@tests.R#13) ----------------------------------------------
+get_minimum(x, na.rm = FALSE) not equivalent to min(x).
+target is logical, current is numeric
+
+
+DONE ===============================================================================================
