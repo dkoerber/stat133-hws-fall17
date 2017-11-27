@@ -12,8 +12,8 @@ __QZ4:__        quiz 4 score, out of 20
 __EX1:__        exam 1 score, out of 80  
 __EX2:__        exam 2 score, out of 90
 __Test1:__      exam 1 score, rescaled to 100  
-__Test2:__      exam 2 score, rescaled to 100
-__Homework:__   overall score on homework, dropping the lowest
-__Quiz:__       overall score on quizzes, dropping the lowest
-__Overall:__    overall score in the class, out of 100
-__Grade:__      letter grade earned in the class
+__Test2:__      exam 2 score, rescaled to 100  
+__Homework:__   overall score on homework, dropping the lowest  
+__Quiz:__       overall score on quizzes, dropping the lowest  
+__Overall:__    overall score in the class, out of 100  
+__Grade:__      letter grade earned in the class  
