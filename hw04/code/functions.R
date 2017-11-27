@@ -91,6 +91,26 @@ get_stdev <- function(x, na.rm=FALSE) {
   return(sqrt(total / (n - 1)))
 }
 
+# get 10th percentile function
+get_percentile10 <- function(x, na.rm=FALSE) {
+  if (na.rm) {
+    x <- remove_missing(x)
+  } else if (NA %in% x) {
+    return(NA)
+  }
+  return(quantile(x, probs = 0.1)[[1]])
+}
+
+# get 90th percentile function
+get_percentile90 <- function(x, na.rm=FALSE) {
+  if (na.rm) {
+    x <- remove_missing(x)
+  } else if (NA %in% x) {
+    return(NA)
+  }
+  return(quantile(x, probs = 0.9)[[1]])
+}
+
 # get first quartile function
 get_quartile1 <- function(x, na.rm=FALSE) {
   if (na.rm) {
@@ -126,21 +146,23 @@ count_missing <- function(x) {
 # summary statistics function
 summary_stats <- function(x) {
   list_minimum   = get_minimum(x, na.rm = TRUE)
-  list_percent10 = 
+  list_percent10 = get_percentile10(x, na.rm = TRUE)
   list_quartile1 = get_quartile1(x, na.rm = TRUE)
   list_median    = get_median(x, na.rm = TRUE)
   list_mean      = get_average(x, na.rm = TRUE)
   list_quartile3 = get_quartile3(x, na.rm = TRUE)
-  list_percent90 = 
+  list_percent90 = get_percentile90(x, na.rm = TRUE)
   list_maximum   = get_maximum(x, na.rm = TRUE)
   list_range     = get_range(x, na.rm = TRUE)
   list_stdev     = get_stdev(x, na.rm = TRUE)
   list_missing   = count_missing(x)
   return(list(minimum = list_minimum,
+              percent10 = list_percent10,
               quartile1 = list_quartile1,
               median = list_median,
               mean = list_mean,
               quartile3 = list_quartile3,
+              percent90 = list_percent90,
               maximum = list_maximum,
               range = list_range,
               stdev = list_stdev,
